@@ -23,9 +23,9 @@ node index.js
 
 #### 用户信息输入页
 ![用户信息输入页面](screenshot/p1.png)
-
+---
 #### 用户qq群列表
 ![用户qq群列表](screenshot/p2.png)
-
+---
 #### excel导出
 ![excel导出](screenshot/p3.png)
