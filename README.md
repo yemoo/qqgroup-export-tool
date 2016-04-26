@@ -9,7 +9,7 @@ npm install
 ## 启动方法
 
 ```
-node index.js
+npm start
 ```
 
 访问http://YOUR IP:8000即可，按照页面提示操作即可提取。
