@@ -20,8 +20,12 @@ node index.js
 点击`导出用户邮件列表（Excel格式）`将导出excel文件，每条记录包括成员名，群名片，qq号，性别，角色，加入时间，最后发言时间等。
 
 ## 相关截图
+
+#### 用户信息输入页
 ![用户信息输入页面](screenshot/p1.png)
 
+#### 用户qq群列表
 ![用户qq群列表](screenshot/p2.png)
 
+#### excel导出
 ![excel导出](screenshot/p3.png)
