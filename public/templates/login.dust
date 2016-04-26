@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QQ群用户邮件列表导出工具</title>
+    <!-- Bootstrap -->
+    <link href="http://cdn.staticfile.org/twitter-bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    body{padding: 20px 0;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+            <form action="/group" method="post" />
+                <p class="help-block"><strong>登录地址：</strong><a href="http://qun.qq.com/member.html#gid=6105351" target="_blank">http://qun.qq.com/member.html</a></p>
+                <p class="help-block"><strong>操作方法：</strong>请使用<code>chrome</code>浏览器，打开上面URL并登录QQ后，按<code>F12</code>键打开控制台，选择<code>console</code>标签，然后在控制台中输入<code>document.cookie</code>，复制返回的内容到下面的输入框中，点击提交即可。</p>
+                <div class="form-group">
+                    <textarea name="cookies" id="js-cookies" class="form-control" rows="10" placeholder="请将cookie内容粘贴到该输入框中">
+                    </textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">提 交</button>
+            </form>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+    <script>
+        $('form').submit(function(){
+            if(!$('#js-cookies').val()){
+                alert('请将cookie内容粘贴到输入框中再提交！');
+                return false;
+            }
+            return true;
+        });
+    </script>
+</body>
+</html>

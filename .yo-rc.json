@@ -1,0 +1,14 @@
+{
+  "generator-kraken": {
+    "taskModule": "grunt",
+    "lintModule": "eslint",
+    "description": "qun2email",
+    "author": "yemoo",
+    "templateModule": "makara",
+    "i18n": false,
+    "componentPackager": false,
+    "cssModule": "sass",
+    "jsModule": false,
+    "useJson": null
+  }
+}

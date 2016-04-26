@@ -1,0 +1,82 @@
+{
+
+
+    "express": {
+        "view cache": false,
+        "view engine": "js",
+        "views": "path:./.build/templates"
+    },
+
+
+
+    "view engines": {
+        "js": {
+            "module": "makara",
+            "renderer": {
+                "method": "js",
+                "arguments": [
+                    {
+                        "cache": true,
+                        "helpers": "config:dust.helpers"
+                    }
+                ]
+            }
+        }
+    },
+
+    "dust": {
+        "helpers": [
+
+        ]
+    },
+
+
+
+    "specialization": {},
+
+    "middleware": {
+        "appsec": {
+            "enabled": true,
+            "priority": 110,
+            "module": {
+                "name": "lusca",
+                "arguments": [{
+                    "csrf": false,
+                    "xframe": "SAMEORIGIN",
+                    "p3p": false,
+                    "csp": false
+                }]
+            }
+        },
+
+        "makara": {
+            "priority": 100,
+            "enabled": true,
+            "module": {
+                "name": "makara",
+                "arguments": [
+                    {
+                        "i18n": "config:i18n",
+                        "specialization": "config:specialization"
+                    }
+                ]
+            }
+        },
+
+
+        "static": {
+            "module": {
+                "arguments": ["path:./.build"]
+            }
+        },
+
+        "router": {
+            "module": {
+                "arguments": [{
+                    "directory": "path:./controllers"
+                }]
+            }
+        }
+
+    }
+}
